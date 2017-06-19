@@ -1,6 +1,5 @@
 # Scheduler
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+Basic appointment scheduler using created using Angular CLI with Angular 4.
 
 ## Development server
 
