@@ -6,52 +6,82 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'app';
+  title: string = 'Appointment Scheduler';
+  slotId: number = 0;
   timeSlots: any[] = [
     {
+      "id": 0,
       "name": '',
       "phoneNumber": '',
-      "time": '9 AM'
+      "time": '9 AM',
+      "isAvailable": true
     },
     {
+      "id": 1,
       "name": '',
       "phoneNumber": '',
-      "time": '10 AM'
+      "time": '10 AM',
+      "isAvailable": true
     },
     {
+      "id": 2,
       "name": '',
       "phoneNumber": '',
-      "time": '11 AM'
+      "time": '11 AM',
+      "isAvailable": true
     },
     {
+      "id": 3,
       "name": '',
       "phoneNumber": '',
-      "time": '12 AM'
+      "time": '12 AM',
+      "isAvailable": true
     },
     {
+      "id": 4,
       "name": '',
       "phoneNumber": '',
-      "time": '1 PM'
+      "time": '1 PM',
+      "isAvailable": true
     },
     {
+      "id": 5,
       "name": '',
       "phoneNumber": '',
-      "time": '2 PM'
+      "time": '2 PM',
+      "isAvailable": true
     },
     {
+      "id": 6,
       "name": '',
       "phoneNumber": '',
-      "time": '3 PM'
+      "time": '3 PM',
+      "isAvailable": true
     },
     {
+      "id": 7,
       "name": '',
       "phoneNumber": '',
-      "time": '4 PM'
+      "time": '4 PM',
+      "isAvailable": true
     },
     {
+      "id": 8,
       "name": '',
       "phoneNumber": '',
-      "time": '5 PM'
+      "time": '5 PM',
+      "isAvailable": true
     }
   ];
+  openModal(id): void {
+    this.slotId = id;
+  };
+  submit(): void {
+    console.log('submit');
+    if (this.timeSlots[this.slotId].name && this.timeSlots[this.slotId].phoneNumber) {
+      this.timeSlots[this.slotId].isAvailable = false;
+    } else {
+      this.timeSlots[this.slotId].isAvailable = true;
+    }
+  };
 }
