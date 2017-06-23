@@ -77,7 +77,6 @@ export class AppComponent {
     this.slotId = id;
   };
   submit(): void {
-    console.log('submit');
     if (this.timeSlots[this.slotId].name && this.timeSlots[this.slotId].phoneNumber) {
       this.timeSlots[this.slotId].isAvailable = false;
     } else {
